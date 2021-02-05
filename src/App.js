@@ -6,9 +6,9 @@ export default function App() {
   const [selectedDropdown, setSelectedDropdown] = React.useState(); // state variable
 
   const handleSelect = (event) => {
-    // console.log('value : ', event.target.value);
+
     setSelectedDropdown(event.target.value);
-    // console.log('selectedDropdown: ', selectedDropdown);
+
   }
   const renderInputBoxes = (field1, field2) => {
     return (
@@ -18,16 +18,7 @@ export default function App() {
       </div >
     )
   }
-  const renderModulesDropdown = () => {
-    return (
-      <div>
-        {/* <select onChange={(event) => handleSelect(event)}>
-          { }
-          <option value="">Choose Device</option>
-        </select> */}
-      </div>
-    )
-  }
+
   return (
     <div>
       <select onChange={(event) => handleSelect(event)}>
@@ -43,9 +34,7 @@ export default function App() {
       {selectedDropdown === 'relay' && (
         renderInputBoxes('Relay Id', 'Relay'))
       }
-      {/* {selectedDropdown === 'relay' && (
-        renderModulesDropdown())
-      } */}
+
     </div>
   )
 }
